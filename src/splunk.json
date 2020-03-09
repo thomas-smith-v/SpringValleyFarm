@@ -1,0 +1,7 @@
+{
+	"url":"https://splunk.business.uconn.edu:8088/services/collector/event",
+	"index":"senior_design",
+	"token":"f5b25ca0-3e65-428d-ad2d-e62653144bfc",
+	"owner":"",
+	"logtoken":""
+}
