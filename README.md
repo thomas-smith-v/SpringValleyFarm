@@ -1,2 +1,2 @@
-# spring_valley_farm
+# SpringValleyFarm
 UConn Senior Design IoT project for the Spring Valley Farm
