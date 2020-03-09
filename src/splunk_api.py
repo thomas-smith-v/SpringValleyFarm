@@ -4,10 +4,6 @@ import socket
 import requests
 import config
 
-def load_config():
-    with open("splunk.json", "r") as f:
-        return json.load(f)
-
 def post(sourcetype: str, eventtype: str, fields: dict):
     try:
         cfg = config.load_config()
