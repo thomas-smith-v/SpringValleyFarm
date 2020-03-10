@@ -11,7 +11,7 @@ def post(sourcetype: str, eventtype: str, fields: dict):
         
         data = {
             "index": cfg['index'],
-            "host":str(socket.gethostname()),
+            "host":socket.gethostname(),
             "sourcetype":sourcetype,
             "event":eventtype,
             "fields":fields
