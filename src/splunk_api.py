@@ -1,8 +1,10 @@
-#!/home/pi/Documents/student_farm_iot/src/env python3
 import json
 import socket
 import requests
-import config
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+import os
+
+from src import config
 
 def post(sourcetype: str, eventtype: str, fields: dict):
     try:
@@ -11,7 +13,7 @@ def post(sourcetype: str, eventtype: str, fields: dict):
         
         data = {
             "index": cfg['index'],
-            "host":socket.gethostname(),
+            "host":str(socket.gethostname()),
             "sourcetype":sourcetype,
             "event":eventtype,
             "fields":fields
@@ -30,6 +32,7 @@ def get():
     
 
 if __name__ == "__main__":
-    response = post(sourcetype="httpevent", eventtype="hello world", fields={'metric_name':'test'})
-    print(str(response.text))
-    print(response)
+    pass
+    #response = post(sourcetype="httpevent", eventtype="hello world", fields={'metric_name':'test'})
+    #print(str(response.text))
+    #print(response)

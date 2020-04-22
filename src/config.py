@@ -1,5 +1,6 @@
 import json
+import os
 
 def load_config():
-    with open("splunk.json", "r") as f:
+    with open(os.path.dirname(os.path.abspath(__file__)) + "/splunk.json", "r") as f:
         return json.load(f)
