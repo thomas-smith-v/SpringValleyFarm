@@ -47,5 +47,3 @@ def get_current(values: dict):
     }
     """
     return min(values, key=lambda x: abs(_parse_time(x['validTime']) - datetime.now().astimezone(tz=pytz.timezone("US/Eastern"))))['value']
-
-print(get_current(get_temperature_forecast()))
