@@ -11,6 +11,7 @@ def run_system_metrics():
     metrics.post_system_metric(name="cpu_temperature", value=cpu_temperature)
     metrics.post_system_metric(name="core_voltage", value=core_voltage)
     metrics.post_system_metric(name="cpu_percent", value=cpu_percent)
+    print("\n")
 
 def run_weather_metrics():
     weather = weather_info.get_weather()
@@ -32,7 +33,7 @@ def run_weather_metrics():
     metrics.post_weather_metric(name="sky_cover_forecast", value=sky_cover_forecast)
 
     """
-    
+    print("\n")
     
 
 def main():
