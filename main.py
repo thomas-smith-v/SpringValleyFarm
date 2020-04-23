@@ -21,12 +21,19 @@ def run_weather_metrics():
     current_temperature = weather_info.get_current(temperature_forecast)
     current_sky_cover = weather_info.get_current(sky_cover_forecast)
 
-    metrics.post_weather_metric(name="temperature_forecast", value=temperature_forecast)
     metrics.post_weather_metric(name="current_temperature", value=current_temperature)
-    metrics.post_weather_metric(name="sky_cover_forecast", value=sky_cover_forecast)
     metrics.post_weather_metric(name="current_sky_cover", value=current_sky_cover)
     
+    """
+    ~~ Unable to upload this data to Splunk. This is supposed to upload the       ~~
+    ~~ 7-day forecast for temperature and sky cover to be shown on the dashboard. ~~
+    
+    metrics.post_weather_metric(name="temperature_forecast", value=temperature_forecast)
+    metrics.post_weather_metric(name="sky_cover_forecast", value=sky_cover_forecast)
 
+    """
+    
+    
 
 def main():
     # Initial upload
